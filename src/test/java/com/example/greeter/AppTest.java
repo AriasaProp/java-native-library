@@ -7,6 +7,7 @@ import java.lang.System;
 public class AppTest{
     @Test
     void sayHello() {
-        System.out.println(new Greeter().sayHello("Ariasa succes!"));
+        System.out.println("Hello World!");
+        //System.out.println(new Greeter().sayHello("Ariasa succes!"));
     }
 }
