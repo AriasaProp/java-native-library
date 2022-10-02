@@ -2,7 +2,7 @@ package com.example.greeter;
 
 import com.example.greeter.Greeter;
 import org.junit.jupiter.api.Test;
-import java.io.System;
+import java.lang.System;
 
 public class AppTest{
     @Test
