@@ -11,7 +11,7 @@ import java.nio.file.Files;
 public class Greeter {
 
     static {
-        NativeLoader.loadLibrary(Greeter.class.getClassLoader(), "java-cpp-jni-library");
+        NativeLoader.loadLibrary(Greeter.class.getClassLoader(), "java-native-library");
     }
 
     public native String sayHello(String name);
