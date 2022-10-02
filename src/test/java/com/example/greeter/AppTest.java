@@ -11,6 +11,7 @@ public class AppTest{
 
 
 
+    @Test
     public static void main(String[] args) {
         System.println(Greeter.sayHello("Ariasa succes!"));
     }
