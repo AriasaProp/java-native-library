@@ -3,22 +3,24 @@ name: Build Library
 on: [push]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Gradle Build Action
         uses: gradle/gradle-build-action@v2.3.2
       - name: build Gradle
-        run: gradle build
-      - name: Get JAR
-        id: jar-path
         run: |
-          path=$(find ${{github.workspace}}/build/libs/ -name '*.jar' -type f | head -1)
-          echo "::set-output name=path::$path"
-      - name: Upload Native JAR
-        uses: actions/upload-artifact@v3.1.0
-        with:
-          name: output-jar
-          path: ${{ steps.jar-path.outputs.path }}
+          gradle build
+          gradle test
+      #- name: Get JAR
+    #    id: jar-path
+      #  run: |
+        #  path=$(find ${{github.workspace}}/build/libs/ -name '*.jar' -type f | head -1)
+        #  echo "::set-output name=path::$path"
+     # - name: Upload Native JAR
+     #   uses: actions/upload-artifact@v3.1.0
+      #  with:
+          #name: output-jar
+          #path: ${{ steps.jar-path.outputs.path }}
     
