@@ -1,18 +1,11 @@
-
 package com.example.greeter;
 
-
-
 import com.example.greeter.Greeter;
-import java.io.*;
+import java.io.System;
 
 public class AppTest{
-
-
-
-
     @Test
-    public static void main(String[] args) {
-        System.println(Greeter.sayHello("Ariasa succes!"));
+    void sayHello() {
+        System.out.println(Greeter.sayHello("Ariasa succes!"));
     }
 }

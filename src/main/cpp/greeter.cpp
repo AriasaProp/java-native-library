@@ -1,9 +1,7 @@
-
 #include "com_example_greeter_Greeter.h"
 
 #include <cstring>
 #include <cstdlib>
-
 #include "greeter.h"
 
 static const char * ERROR_STRING = "name cannot be null";
